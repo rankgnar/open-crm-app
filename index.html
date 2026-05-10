@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#09090b" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Open-CRM" />
+    <title>Open-CRM</title>
+    <meta name="description" content="Open-CRM" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Open-CRM" />
+    <meta property="og:description" content="Open-CRM" />
+    <meta property="og:image" content="/icon.svg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Open-CRM" />
+    <meta name="twitter:description" content="Open-CRM" />
+    <meta name="twitter:image" content="/icon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('crm-ia.theme');
+          var theme = stored === 'light' || stored === 'dark'
+            ? stored
+            : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+          var root = document.documentElement;
+          if (theme === 'dark') root.classList.add('dark');
+          root.dataset.theme = theme;
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute('content', theme === 'dark' ? '#09090b' : '#fafafa');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "Open-CRM",
+  "short_name": "Open-CRM",
+  "description": "Open-CRM",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "lang": "sv",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
